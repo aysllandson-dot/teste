@@ -56,33 +56,35 @@ export default async function DashboardPage() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm flex items-center justify-between">
+        <div className="glass-card hover-lift p-6 flex items-center justify-between group">
           <div className="flex flex-col gap-1">
-            <span className="text-gray-500 dark:text-gray-400 text-sm font-medium">Total de Funcionários Ativos</span>
-            <span className="text-3xl font-bold text-[var(--color-primary)] dark:text-blue-400">{totalEmployees}</span>
+            <span className="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Funcionários Ativos</span>
+            <span className="text-4xl font-black text-[var(--color-primary)] dark:text-red-400 drop-shadow-sm">{totalEmployees}</span>
           </div>
-          <div className="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-[var(--color-primary)] dark:text-blue-400">
-            <Users className="w-6 h-6" />
+          <div className="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-950/30 flex items-center justify-center text-[var(--color-primary)] dark:text-red-400 transition-transform duration-500 group-hover:rotate-12">
+            <Users className="w-7 h-7" />
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm flex items-center justify-between">
+        <div className="glass-card hover-lift p-6 flex items-center justify-between group">
           <div className="flex flex-col gap-1">
-            <span className="text-gray-500 dark:text-gray-400 text-sm font-medium">Média Geral de Avaliações</span>
-            <span className="text-3xl font-bold text-[var(--color-secondary)]">{(avgData._avg.average || 0).toFixed(1)} <span className="text-xl">★</span></span>
+            <span className="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Média das Avaliações</span>
+            <span className="text-4xl font-black text-[var(--color-secondary)] drop-shadow-sm">
+              {(avgData._avg.average || 0).toFixed(1)} <span className="text-2xl">★</span>
+            </span>
           </div>
-          <div className="w-12 h-12 rounded-full bg-yellow-50 dark:bg-yellow-900/30 flex items-center justify-center text-[var(--color-secondary)]">
-            <Star className="w-6 h-6" />
+          <div className="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-orange-950/30 flex items-center justify-center text-[var(--color-secondary)] transition-transform duration-500 group-hover:rotate-12">
+            <Star className="w-7 h-7" />
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm flex items-center justify-between">
+        <div className="glass-card hover-lift p-6 flex items-center justify-between group">
           <div className="flex flex-col gap-1">
-            <span className="text-gray-500 dark:text-gray-400 text-sm font-medium">Total de Avaliações Feitas</span>
-            <span className="text-3xl font-bold text-gray-800 dark:text-gray-100">{totalEvaluations}</span>
+            <span className="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Total de Registros</span>
+            <span className="text-4xl font-black text-slate-800 dark:text-slate-100 drop-shadow-sm">{totalEvaluations}</span>
           </div>
-          <div className="w-12 h-12 rounded-full bg-gray-50 dark:bg-slate-800 flex items-center justify-center text-gray-500 dark:text-gray-400">
-            <MessageSquare className="w-6 h-6" />
+          <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 transition-transform duration-500 group-hover:rotate-12">
+            <MessageSquare className="w-7 h-7" />
           </div>
         </div>
       </div>
